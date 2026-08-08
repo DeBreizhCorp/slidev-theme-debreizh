@@ -1,0 +1,114 @@
+.slidev-layout {
+  background: transparent;
+  color: white;
+  font-family: var(--font-sans);
+}
+
+.slidev-layout h1,
+.slidev-layout h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+.slidev-layout h3,
+.slidev-layout h4 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+.slidev-layout p {
+  color: color-mix(in srgb, white 90%, transparent);
+  line-height: 1.6;
+}
+
+/* :where() keeps this at zero specificity so component utility classes
+   (e.g. Button's text-white) can still override it — a plain ".slidev-layout a"
+   selector previously beat "text-white" and made primary buttons' labels
+   invisible (same color as their own background). */
+:where(.slidev-layout) a {
+  color: var(--portfolio-midnight-100);
+  text-decoration: none;
+}
+:where(.slidev-layout) a:hover {
+  color: color-mix(in srgb, var(--portfolio-midnight-100) 80%, white);
+}
+
+.slidev-layout code {
+  font-family: var(--font-mono);
+}
+
+.slidev-layout :not(pre) > code {
+  background: var(--portfolio-darkend-2);
+  border: 1px solid
+    color-mix(in srgb, var(--portfolio-grayend) 15%, transparent);
+  border-radius: 6px;
+  padding: 0.15em 0.45em;
+}
+
+.slidev-layout pre {
+  background: var(--portfolio-darkend-2) !important;
+  border: 1px solid
+    color-mix(in srgb, var(--portfolio-grayend) 15%, transparent);
+  border-radius: 10px;
+}
+
+.slidev-layout blockquote {
+  border-left: 3px solid var(--portfolio-midnight-100);
+  color: var(--portfolio-grayend);
+  padding-left: 1.25rem;
+  font-style: normal;
+}
+
+.slidev-layout hr {
+  border: none;
+  border-top: 1px solid
+    color-mix(in srgb, var(--portfolio-grayend) 20%, transparent);
+}
+
+.slidev-layout ::selection {
+  background: var(--portfolio-midnight-100);
+  color: white;
+}
+
+/* Hero-style gradient title — mirrors the Bp wordmark's SVG gradient
+   (white -> midnight-100 -> accent red), used only on cover/end layouts.
+   SectionHeading elsewhere on the site stays plain white by contrast. */
+.gradient-title {
+  display: inline-block;
+  background: linear-gradient(
+    135deg,
+    white 0%,
+    var(--portfolio-midnight-100) 30%,
+    var(--portfolio-midnight-100) 55%,
+    var(--portfolio-accent-red) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 30px color-mix(in srgb, var(--portfolio-midnight-100) 55%, transparent))
+    drop-shadow(0 0 60px color-mix(in srgb, var(--portfolio-accent-red) 25%, transparent));
+}
+
+.cover-body h1,
+.end-body h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
+}
+
+.cover-body p,
+.end-body p {
+  color: var(--portfolio-grayend);
+  font-size: 1.1rem;
+}
+
+/* eyebrow: small uppercase mono label, used by cover/section/end layouts */
+.slidev-layout .eyebrow {
+  font-family: var(--font-mono);
+  color: var(--portfolio-midnight-100);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}

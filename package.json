@@ -1,0 +1,47 @@
+{
+  "name": "slidev-theme-debreizh",
+  "version": "0.0.1",
+  "description": "A Slidev theme based on the Debreizh design system — Midnight/Darkend colors, Lostar/Source Sans 3/Fira Code/Crimson Pro typefaces.",
+  "type": "module",
+  "author": "Benjamin Piel <benjamin.piel.3591@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "slidev": ">=0.48.0"
+  },
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "slidev": {
+    "colorSchema": "dark",
+    "highlighter": "shiki"
+  },
+  "scripts": {
+    "dev": "slidev example.md --open",
+    "build": "slidev build example.md",
+    "export": "slidev export example.md"
+  },
+  "files": [
+    "layouts",
+    "components",
+    "styles",
+    "public",
+    "global-bottom.vue",
+    "uno.config.ts",
+    "example.md",
+    "slides.md"
+  ],
+  "peerDependencies": {
+    "@slidev/cli": "*"
+  },
+  "dependencies": {
+    "@fontsource-variable/crimson-pro": "*",
+    "@fontsource-variable/fira-code": "*",
+    "@fontsource-variable/platypi": "*",
+    "@fontsource-variable/source-sans-3": "*"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.19.0",
+    "playwright-chromium": "^1.62.1"
+  }
+}

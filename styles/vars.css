@@ -1,0 +1,20 @@
+:root {
+  /* Design tokens — mirrors src/styles/global.css of the portfolio */
+  --portfolio-midnight: #36459b;
+  --portfolio-midnight-100: #4658be;
+  --portfolio-midnight-800: #1e2a78;
+  --portfolio-midnight-900: #05060f;
+  --portfolio-darkend: #0c0f19;
+  --portfolio-darkend-2: #1a1c1f;
+  --portfolio-grayend: #858b98;
+  --portfolio-accent-red: #c70000;
+
+  --font-display: 'Lostar', sans-serif;
+  --font-sans: 'Source Sans 3 Variable', sans-serif;
+  --font-mono: 'Fira Code Variable', monospace;
+  --font-serif: 'Crimson Pro Variable', serif;
+  --font-serif-2: 'Platypi Variable', serif;
+
+  /* Slidev hooks */
+  --slidev-theme-primary: var(--portfolio-midnight-100);
+}
