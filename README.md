@@ -71,7 +71,7 @@ themeConfig:
 
 ## Components
 
-- `<Badge size="sm|md">...</Badge>`
+- `<Badge size="sm|md" learning>...</Badge>` — `learning` gives a dashed, half-opacity look for skills still in progress.
 - `<Card>...</Card>`
 - `<Button variant="primary|ghost" href="...">...</Button>`
 - `<Timeline>...</Timeline>` / `<TimelineItem status="done|progress|todo">...</TimelineItem>` — vertical roadmap with a status dot.

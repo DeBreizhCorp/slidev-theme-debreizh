@@ -102,18 +102,23 @@ layout: default
 
 ---
 layout: code
-title: Un exemple de code
+title: Le composant Badge
 ---
 
-<CodeWindow filename="exemple.ts">
+<CodeWindow filename="src/components/ui/Badge/index.tsx">
 
-```ts {1-2|4-6|all}
-interface Props {
-  label: string;
-}
-
-export function Example({ label }: Props) {
-  return label;
+```tsx {1|4-8|all}
+export function Badge({ children, modifiers = [] }: BadgeProps) {
+  return (
+    <span
+      className={clsx(
+        'ui-badge',
+        modifiers.map((modifier) => `ui-badge--${modifier}`),
+      )}
+    >
+      {children}
+    </span>
+  );
 }
 ```
 

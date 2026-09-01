@@ -68,6 +68,7 @@ layout: two-cols
 <div class="flex flex-wrap gap-2 mt-4 mb-6">
   <Badge>Node.js</Badge>
   <Badge size="sm">REST</Badge>
+  <Badge size="sm" learning>AdonisJS</Badge>
 </div>
 
 <Card>
@@ -111,16 +112,16 @@ layout: code
 title: Le composant Badge
 ---
 
-<CodeWindow filename="src/components/ui/Badge.tsx">
+<CodeWindow filename="src/components/ui/Badge/index.tsx">
 
-```tsx {2-3|5-6|9|all}
-export function Badge({ children, size = 'md' }: BadgeProps) {
-  const sizeClasses =
-    size === 'sm' ? 'text-sm px-2 py-1' : 'text-[15px] px-2 py-1';
-
+```tsx {1|4-8|all}
+export function Badge({ children, modifiers = [] }: BadgeProps) {
   return (
     <span
-      className={`inline-block font-mono font-bold text-midnight-100 bg-zinc-900 rounded-md ${sizeClasses}`}
+      className={clsx(
+        'ui-badge',
+        modifiers.map((modifier) => `ui-badge--${modifier}`),
+      )}
     >
       {children}
     </span>

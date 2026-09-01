@@ -5,7 +5,7 @@
   >
     <div
       class="relative inline-block font-display"
-      style="font-size: clamp(2.5rem, 7vw, 6rem)"
+      style="font-size: clamp(2.5rem, 6vw, 4.5rem)"
     >
       <span
         v-if="$frontmatter.index != null"
